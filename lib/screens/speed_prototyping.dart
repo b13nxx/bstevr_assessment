@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 /*
- * These are the internal dependencies for the widget below
+ * These are the internal dependencies
  */
 import 'package:bstevr_assessment/models/icon_entry.dart';
 import 'package:bstevr_assessment/commons/text_styles.dart';
 import 'package:bstevr_assessment/widgets/quick_actions.dart';
 import 'package:bstevr_assessment/widgets/selectable_cards.dart';
+import 'package:bstevr_assessment/widgets/custom_app_bar.dart';
 import 'package:bstevr_assessment/widgets/custom_navigation_bar.dart';
 
 class SpeedPrototype extends StatelessWidget {
@@ -22,7 +23,8 @@ class SpeedPrototype extends StatelessWidget {
       IconEntry(icon: Icons.microwave_outlined, text: 'Kitchen Is Used'),
     ];
     List<IconEntry> favoriteScenesEntries = [
-      IconEntry(icon: Icons.self_improvement, text: 'I\'m Home', secondText: 'Open'),
+      IconEntry(
+          icon: Icons.self_improvement, text: 'I\'m Home', secondText: 'Open'),
       IconEntry(
           icon: Icons.time_to_leave, text: 'I\'m Leaving', secondText: '80%'),
       IconEntry(
@@ -37,7 +39,9 @@ class SpeedPrototype extends StatelessWidget {
       ...[
         IconEntry(icon: Icons.villa, text: 'Kitchen Door', secondText: 'Open'),
         IconEntry(
-            icon: Icons.emoji_objects, text: 'Hallway Light', secondText: '80%'),
+            icon: Icons.emoji_objects,
+            text: 'Hallway Light',
+            secondText: '80%'),
         IconEntry(
             icon: Icons.thermostat,
             text: 'Living Room',
@@ -55,25 +59,16 @@ class SpeedPrototype extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color.fromRGBO(2, 175, 192, 1),
-              Color.fromRGBO(1, 93, 118, 1),
-            ],
-          )),
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          Color.fromRGBO(2, 175, 192, 1),
+          Color.fromRGBO(1, 93, 118, 1),
+        ],
+      )),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          leading: IconButton(icon: const Icon(Icons.home), onPressed: () {}),
-          actions: <Widget>[
-            IconButton(icon: const Icon(Icons.add), onPressed: () {})
-          ],
-          bottomOpacity: 0.0,
-          elevation: 0.0,
-          backgroundColor: Colors.transparent,
-          foregroundColor: Colors.white,
-        ),
+        appBar: CustomAppBar(),
         body: Container(
             padding: const EdgeInsets.only(left: 15, right: 15),
             child: Column(
@@ -111,13 +106,12 @@ class SpeedPrototype extends StatelessWidget {
               ],
             )),
         bottomNavigationBar:
-        CustomNavigationBar(entries: bottomNavigationBarItems),
+            CustomNavigationBar(entries: bottomNavigationBarItems),
         floatingActionButton: FloatingActionButton(
-          onPressed: () => {
-            Navigator.pushNamed(context, '/coinDetector')
-          },
+          onPressed: () => {Navigator.pushNamed(context, '/coinDetector')},
           tooltip: 'View Stream',
-          child: const Icon(Icons.view_agenda_outlined, size: 32, color: Colors.white),
+          child: const Icon(Icons.view_agenda_outlined,
+              size: 32, color: Colors.white),
         ),
       ),
     );

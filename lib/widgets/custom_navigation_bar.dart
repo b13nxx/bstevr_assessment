@@ -26,7 +26,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
   int _selectedIndex = 0;
 
   /*
-   * These are inner logic that will change the state of the component
+   * These are inner logics that will change the state of the component
    */
   void _toggleBarItem(int index) {
     setState(() {
@@ -36,7 +36,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
 
   /*
    * The rendering method, in which the component tells
-   * how it should show itself.
+   * how it should show itself
    */
   @override
   Widget build(BuildContext context) {

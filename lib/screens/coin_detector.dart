@@ -9,6 +9,7 @@ import 'dart:math';
 import 'package:bstevr_assessment/widgets/loading_bar.dart';
 import 'package:bstevr_assessment/widgets/coin_card.dart';
 import 'package:bstevr_assessment/utilities/custom_audio_player.dart';
+import 'package:bstevr_assessment/widgets/custom_app_bar.dart';
 
 class CoinDetector extends StatefulWidget {
   const CoinDetector({Key? key}) : super(key: key);
@@ -24,12 +25,12 @@ class CoinDetector extends StatefulWidget {
 
 class _CoinDetectorState extends State<CoinDetector> {
   /*
-   * These are class-specific private fields.
+   * These are class-specific private fields
    */
   late StreamBuilder _streamBuilder;
 
   /*
-   * These are class-specific private methods.
+   * These are class-specific private methods
    */
   StreamBuilder _getStreamBuilder() {
     return StreamBuilder(
@@ -45,7 +46,7 @@ class _CoinDetectorState extends State<CoinDetector> {
 
   /*
    * This is the Stream itself returning randomly 'Real Coin' or 'Fake Coin'
-   * also populating Coin Card list based on generated random data.
+   * also populating Coin Card list based on generated random data
    */
   Stream<String> _tick() async* {
     while (!_isPaused) {
@@ -85,7 +86,7 @@ class _CoinDetectorState extends State<CoinDetector> {
     /*
      * We don't need to do below because The StreamBuilder itself extends from
      * StreamBuilderBase which is a StatefulWidget, and it handles
-     * the StreamSubscription with its own dispose method.
+     * the StreamSubscription with its own dispose method
      */
     // _streamBuilder.dispose();
 
@@ -110,7 +111,7 @@ class _CoinDetectorState extends State<CoinDetector> {
 
   void _setIsPaused(bool value) {
     setState(() {
-      _isPaused = !value;
+      _isPaused = value;
 
       // To be able to resume, we need to re-initialize StreamBuilder manually
       if (!_isPaused) {
@@ -133,7 +134,7 @@ class _CoinDetectorState extends State<CoinDetector> {
 
   /*
    * The rendering method, in which the component tells
-   * how it should show itself.
+   * how it should show itself
    */
   @override
   Widget build(BuildContext context) {
@@ -149,23 +150,12 @@ class _CoinDetectorState extends State<CoinDetector> {
         )),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            title: Text(_appTitle),
-            actions: <Widget>[
-              Center(
-                  child: Text(_isPaused ? 'Paused' : 'Running',
-                      style: TextStyle(
-                          color: _entries.isEmpty
-                              ? Colors.white.withOpacity(0.6)
-                              : Colors.white))),
-              Switch(
-                  onChanged: _entries.isEmpty ? null : _setIsPaused,
-                  value: !_isPaused)
-            ],
-            bottomOpacity: 0.0,
-            elevation: 0.0,
-            backgroundColor: Colors.transparent,
-            foregroundColor: Colors.white,
+          appBar: CustomAppBar(
+            includeToggle: true,
+            appTitle: _appTitle,
+            isToggleOn: !_isPaused,
+            isToggleDisabled: _entries.isEmpty,
+            onToggleChanged: (bool value) => _setIsPaused(!value),
           ),
           body: Container(
             width: double.infinity,

@@ -35,7 +35,7 @@ class CoinCard extends StatefulWidget {
 
 class _CoinCardState extends State<CoinCard> with TickerProviderStateMixin {
   /*
-   * These are class-specific private fields.
+   * These are class-specific private fields
    */
   late Timer _timer;
   late AnimationController _animationController;
@@ -98,7 +98,7 @@ class _CoinCardState extends State<CoinCard> with TickerProviderStateMixin {
 
   /*
    * The rendering method, in which the component tells
-   * how it should show itself.
+   * how it should show itself
    */
   @override
   Widget build(BuildContext context) {
