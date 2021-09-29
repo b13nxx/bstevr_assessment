@@ -5,6 +5,11 @@ BSTEVR Assessment.
 ## How To Run
 
 You can run this Flutter app through Android Studio by simply opening the project and tapping the run button.
+Also you can run tests inside the project by simply using command below:
+
+```
+flutter test test/alphabet_tree_test.dart
+```
 
 ## Contents
 
