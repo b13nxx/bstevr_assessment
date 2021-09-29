@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => const SpeedPrototype(),
+        '/': (BuildContext context) => SpeedPrototyping(),
         '/coinDetector': (BuildContext context) => const CoinDetector(),
       }
     );
