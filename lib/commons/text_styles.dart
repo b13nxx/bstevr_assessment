@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 mixin TextStyles {
   static TextStyle weak() {
     return TextStyle(
-        color: Colors.white.withOpacity(0.5),
-        fontSize: 12,
-        fontWeight: FontWeight.normal,
+      color: Colors.white.withOpacity(0.5),
+      fontSize: 12,
+      fontWeight: FontWeight.normal,
     );
   }
 
@@ -14,6 +14,19 @@ mixin TextStyles {
       color: Colors.red,
       fontSize: 14,
       fontWeight: FontWeight.bold,
+    );
+  }
+
+  static TextStyle important() {
+    return const TextStyle(
+        color: Colors.orange, fontSize: 16, fontWeight: FontWeight.bold);
+  }
+
+  static TextStyle normal() {
+    return const TextStyle(
+      color: Colors.black,
+      fontSize: 18,
+      fontWeight: FontWeight.normal
     );
   }
 
