@@ -11,6 +11,7 @@ You can run this Flutter app through Android Studio by simply opening the projec
 The app has two screens and one unit test.
 
 Screens:
+<br />
 <img src="https://user-images.githubusercontent.com/4191018/135350217-8f6b5e5e-c66a-481e-8af6-62c696c38dbc.jpeg" width="350" /> <img src="https://user-images.githubusercontent.com/4191018/135350046-7a6444d3-d9f4-4a9a-8bb8-761914e28f00.jpeg" width="350" />
 
 Alphabet Tree Unit Testing:
