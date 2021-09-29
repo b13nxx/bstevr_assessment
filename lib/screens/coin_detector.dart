@@ -62,6 +62,10 @@ class _CoinDetectorState extends State<CoinDetector> {
         _setAppTitle(isReal ? 'Real' : 'Fake');
         _addCoinEntry(headerText, isReal);
 
+        if (!kReleaseMode) {
+          print ('Coin Detector: ${isReal ? 'Real' : 'Fake'}');
+        }
+
         if (isReal) {
           CustomAudioPlayer.instance.playCoinSound();
         }
