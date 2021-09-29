@@ -11,9 +11,20 @@ mixin BoxDecorations {
 
   static BoxDecoration rectangle(Color backgroundColor, [double radius = 15]) {
     return BoxDecoration(
-      shape: BoxShape.rectangle,
-      color: backgroundColor,
-      borderRadius: BorderRadius.circular(radius)
-    );
+        shape: BoxShape.rectangle,
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(radius));
+  }
+
+  static BoxDecoration gradient() {
+    return const BoxDecoration(
+        gradient: LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [
+        Color.fromRGBO(2, 175, 192, 1),
+        Color.fromRGBO(1, 93, 118, 1),
+      ],
+    ));
   }
 }

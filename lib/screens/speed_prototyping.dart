@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
  */
 import 'package:bstevr_assessment/models/icon_entry.dart';
 import 'package:bstevr_assessment/commons/text_styles.dart';
+import 'package:bstevr_assessment/commons/box_decorations.dart';
 import 'package:bstevr_assessment/widgets/quick_actions.dart';
 import 'package:bstevr_assessment/widgets/selectable_cards.dart';
 import 'package:bstevr_assessment/widgets/custom_app_bar.dart';
@@ -57,15 +58,7 @@ class SpeedPrototype extends StatelessWidget {
     ];
 
     return Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [
-          Color.fromRGBO(2, 175, 192, 1),
-          Color.fromRGBO(1, 93, 118, 1),
-        ],
-      )),
+      decoration: BoxDecorations.gradient(),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: CustomAppBar(),

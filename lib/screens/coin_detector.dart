@@ -6,6 +6,7 @@ import 'dart:math';
 /*
  * These are the internal dependencies
  */
+import 'package:bstevr_assessment/commons/box_decorations.dart';
 import 'package:bstevr_assessment/widgets/loading_bar.dart';
 import 'package:bstevr_assessment/widgets/coin_card.dart';
 import 'package:bstevr_assessment/utilities/custom_audio_player.dart';
@@ -139,15 +140,7 @@ class _CoinDetectorState extends State<CoinDetector> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Color.fromRGBO(2, 175, 192, 1),
-            Color.fromRGBO(1, 93, 118, 1),
-          ],
-        )),
+        decoration: BoxDecorations.gradient(),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: CustomAppBar(
