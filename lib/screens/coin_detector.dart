@@ -76,7 +76,7 @@ class _CoinDetectorState extends State<CoinDetector> {
   }
 
   /*
-   * These are initializing and disposing logics
+   * This is initializing logic
    */
   @override
   void initState() {
@@ -85,6 +85,9 @@ class _CoinDetectorState extends State<CoinDetector> {
     _streamBuilder = _getStreamBuilder();
   }
 
+  /*
+   * This is disposing logics
+   */
   @override
   void dispose() {
     _isPaused = true; // Stopping the Stream itself.

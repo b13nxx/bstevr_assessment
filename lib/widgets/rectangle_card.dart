@@ -16,6 +16,7 @@ class RectangleCard extends StatefulWidget {
   final IconData icon;
   final bool isRectangle;
   final String secondText;
+  final bool isSelected;
 
   const RectangleCard(
       {Key? key,
@@ -23,7 +24,8 @@ class RectangleCard extends StatefulWidget {
       required this.iconSize,
       required this.icon,
       required this.isRectangle,
-      required this.secondText})
+      required this.secondText,
+      this.isSelected = false})
       : super(key: key);
 
   /*
@@ -39,7 +41,16 @@ class _RectangleCardState extends State<RectangleCard> {
   /*
    * The state, basically data that changes over time
    */
-  bool _selected = false;
+  late bool _selected;
+
+  /*
+   * This is initializing logic
+   */
+  @override
+  void initState () {
+    _selected = widget.isSelected;
+    super.initState();
+  }
 
   /*
    * These are inner logic that will change the state of the component
@@ -52,7 +63,7 @@ class _RectangleCardState extends State<RectangleCard> {
 
   /*
    * The rendering method, in which the component tells
-   * how it should show itself.
+   * how it should show itself
    */
   @override
   Widget build(BuildContext context) {

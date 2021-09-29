@@ -16,7 +16,7 @@ class QuickActions extends StatelessWidget {
 
   /*
    * The rendering method, in which the component tells
-   * how it should show itself.
+   * how it should show itself
    */
   @override
   Widget build(BuildContext context) {
@@ -29,6 +29,7 @@ class QuickActions extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) => CircleCard(
                 text: entries[index].text,
                 iconSize: 64,
-                icon: entries[index].icon)));
+                icon: entries[index].icon,
+                isSelected: index == 0)));
   }
 }

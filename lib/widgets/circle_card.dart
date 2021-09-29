@@ -14,12 +14,14 @@ class CircleCard extends StatefulWidget {
   final String text;
   final double iconSize;
   final IconData icon;
+  final bool isSelected;
 
   const CircleCard(
       {Key? key,
       required this.text,
       required this.iconSize,
-      required this.icon})
+      required this.icon,
+      this.isSelected = false})
       : super(key: key);
 
   /*
@@ -35,10 +37,19 @@ class _CircleCardState extends State<CircleCard> {
   /*
    * The state, basically data that changes over time
    */
-  bool _selected = false;
+  late bool _selected;
 
   /*
-   * These are inner logic that will change the state of the component
+   * This is initializing logic
+   */
+  @override
+  void initState () {
+    _selected = widget.isSelected;
+    super.initState();
+  }
+
+  /*
+   * These are inner logics that will change the state of the component
    */
   void _toggleButton() {
     setState(() {
@@ -48,7 +59,7 @@ class _CircleCardState extends State<CircleCard> {
 
   /*
    * The rendering method, in which the component tells
-   * how it should show itself.
+   * how it should show itself
    */
   @override
   Widget build(BuildContext context) {

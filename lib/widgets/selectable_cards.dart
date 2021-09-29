@@ -19,7 +19,7 @@ class SelectableCards extends StatelessWidget {
 
   /*
    * The rendering method, in which the component tells
-   * how it should show itself.
+   * how it should show itself
    */
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,9 @@ class SelectableCards extends StatelessWidget {
                   iconSize: 32,
                   icon: entry.icon,
                   isRectangle: isRectangle,
-                  secondText: entry.secondText))
+                  secondText: entry.secondText,
+                  isSelected: entry.text == 'I\'m Home',
+          ))
               .toList(),
         ));
   }
