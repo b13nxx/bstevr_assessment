@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/*
+ * These are generic methods, predefined to be able to used by whole app
+ */
 mixin BoxDecorations {
   static BoxDecoration circle(Color backgroundColor, [double width = 1]) {
     return BoxDecoration(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /*
- * These are the internal dependencies for the widget below
+ * These are the internal dependencies
  */
 import 'package:bstevr_assessment/commons/text_styles.dart';
 import 'package:bstevr_assessment/commons/box_decorations.dart';
@@ -39,11 +39,6 @@ class RectangleCard extends StatefulWidget {
 
 class _RectangleCardState extends State<RectangleCard> {
   /*
-   * The state, basically data that changes over time
-   */
-  late bool _selected;
-
-  /*
    * This is initializing logic
    */
   @override
@@ -53,7 +48,12 @@ class _RectangleCardState extends State<RectangleCard> {
   }
 
   /*
-   * These are inner logic that will change the state of the component
+   * The state, basically data that changes over time
+   */
+  late bool _selected;
+
+  /*
+   * These are inner logics that will change the state of the component
    */
   void _toggleButton() {
     setState(() {

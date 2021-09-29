@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /*
- * These are the internal dependencies for the widget below
+ * These are the internal dependencies
  */
 import 'package:bstevr_assessment/commons/text_styles.dart';
 import 'package:bstevr_assessment/commons/box_decorations.dart';
@@ -35,11 +35,6 @@ class CircleCard extends StatefulWidget {
 
 class _CircleCardState extends State<CircleCard> {
   /*
-   * The state, basically data that changes over time
-   */
-  late bool _selected;
-
-  /*
    * This is initializing logic
    */
   @override
@@ -47,6 +42,11 @@ class _CircleCardState extends State<CircleCard> {
     _selected = widget.isSelected;
     super.initState();
   }
+
+  /*
+   * The state, basically data that changes over time
+   */
+  late bool _selected;
 
   /*
    * These are inner logics that will change the state of the component

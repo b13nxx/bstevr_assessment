@@ -12,6 +12,10 @@ import 'package:bstevr_assessment/widgets/custom_app_bar.dart';
 import 'package:bstevr_assessment/widgets/custom_navigation_bar.dart';
 
 class SpeedPrototyping extends StatelessWidget {
+  /*
+   * The props, meaning these are not gonna change
+   * during lifetime of the component
+   */
   final List<dynamic> quickActionsEntries;
   final List<dynamic> favoriteScenesEntries;
   final List<dynamic> favoriteAccessoriesEntries;
@@ -25,6 +29,10 @@ class SpeedPrototyping extends StatelessWidget {
         bottomNavigationBarItems = getBottomNavigationBarItems(),
         super(key: key);
 
+  /*
+   * The rendering method, in which the component tells
+   * how it should show itself
+   */
   @override
   Widget build(BuildContext context) {
     return Container(

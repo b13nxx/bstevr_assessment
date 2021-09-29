@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /*
- * These are the internal dependencies for the widget below
+ * These are the internal dependencies
  */
 import 'package:bstevr_assessment/commons/text_styles.dart';
 

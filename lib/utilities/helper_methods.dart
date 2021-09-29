@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
  */
 import 'package:bstevr_assessment/models/icon_entry.dart';
 
+/*
+ * These are helper logics potentially be used across whole project
+ */
 String getTimePassed(DateTime date) {
   Duration difference = DateTime.now().difference(date);
 

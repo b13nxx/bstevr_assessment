@@ -1,9 +1,12 @@
+/*
+ * These are the external dependencies
+ */
 import 'package:just_audio/just_audio.dart';
 
 /*
  * Singleton pattern is used for AudioPlayer instance,
  * because we don't need instances more than one and
- * we can access from anywhere across our application
+ * we can access from anywhere across our app
  */
 class CustomAudioPlayer {
   CustomAudioPlayer._privateConstructor();

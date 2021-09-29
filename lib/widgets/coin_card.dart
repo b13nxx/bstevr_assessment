@@ -42,7 +42,7 @@ class _CoinCardState extends State<CoinCard> with TickerProviderStateMixin {
   late Animation<Offset> _animation;
 
   /*
-   * These are initializing and disposing logics
+   * These is initializing logic
    */
   @override
   void initState() {
@@ -63,6 +63,9 @@ class _CoinCardState extends State<CoinCard> with TickerProviderStateMixin {
     ));
   }
 
+  /*
+   * These is disposing logic
+   */
   @override
   void dispose() {
     _timer.cancel();
